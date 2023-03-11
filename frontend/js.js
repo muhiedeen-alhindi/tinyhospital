@@ -20,8 +20,6 @@ email.addEventListener("blur", function(){
        
 
 
-
-
 const signup_btn= document.getElementById("btn_signup")
 
 
@@ -55,11 +53,14 @@ function signup() {
     if (result.data.status== "success") {
       alert("Signed up successfully!");
     if(result.data.type==1){
-        window.location.href = "/htmls/admin.html";
+       
+      
+      window.location.href = "http://127.0.0.1:5500/frontend/htmls/admin.html";
+
     }else if(result.data.type==2){
-         window.location.href = "./html/employe.html";
+      window.location.href = "http://127.0.0.1:5500/frontend/htmls/employe.html";
     } else if(result.data.type==3){
-         window.location.href = "./html/patient.html";
+      window.location.href = "http://127.0.0.1:5500/frontend/htmls/patient.html";
     }
     } else {
       alert("Email Already exists!");

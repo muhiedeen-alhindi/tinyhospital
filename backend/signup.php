@@ -24,6 +24,7 @@ if ($check_signup > 0) {
     $query->bind_param('ssssi', $name, $email, $hashed_password,$dob,$type);
     $query->execute();
     $response['status'] = "success";
+    $response['type'] = $type;
 }
 
 echo json_encode($response);
