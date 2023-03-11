@@ -5,7 +5,7 @@ password.addEventListener("blur", function(){
       alert("password should  minimum 8  character long")
   }else if (!/^[A-Z]/.test(password.value)) {
       alert("Password must start with an uppercase letter.");
-      signup_btn.disabled = true;
+       
     }
 
 })
@@ -13,17 +13,16 @@ email.addEventListener("blur", function(){
   
   if(!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/.test(email.value)){
               alert("use like this form muhie@live.com ")
-              
-           }
+                        }
 
 })  
        
-
-
 const signup_btn= document.getElementById("btn_signup")
 
 
+
 signup_btn.addEventListener('click', signup);
+
  
 
 
@@ -43,10 +42,7 @@ function signup() {
     data.append('dob', date);
     data.append('type', type);
 
-    
-     
-    
-     
+         
     axios.post(' http://localhost/tinyhospital/backend/signup.php/', data)
     .then((result) => {
     console.log(result.data);
@@ -73,9 +69,8 @@ function signup() {
 }
  
  
-
+// _________________________________________________________________________________signup above_______________
  
-
 
 
 
