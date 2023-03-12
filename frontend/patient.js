@@ -56,4 +56,23 @@ $("#btn-admin").on('click',function(){
       $("#room").append(selectElement );  
     });
   });
+  $(window).on('load',function() {
+    axios({
+      method: "get",
+      url: "http://localhost/tinyhospital/backend/medication.php"
+    }).then(function (res) {
+      console.log(res.data);
+      let selectElement = $('<select id="medication"></select>');
+      for (let i = 0; i < res.data.length; i++) {
+        let id = res.data[i].id;
+        let name = res.data[i].name;
+        
+        let option = $("<option></option>").val(id).text(name);
+        selectElement.append(option);
+      }
+     
+      
+      $("#medication").append(selectElement );  
+    });
+  });
   

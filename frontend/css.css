@@ -15,10 +15,14 @@
 .header{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin: 10px 0px;
-    
+    background-color:rgba(44, 105, 141,0.5);
+    padding: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 40px;
 }
 .nav_bar{
     display: flex;
@@ -72,3 +76,52 @@ gap:25px;
 
 
 /* ______________________________________________________________________________________________ */
+.Doctor {
+    position: relative;
+  }
+  
+  .burgermenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+     
+    background-color: #979090;
+     
+    width: 100px;
+    margin-right: 100px;
+  }
+  
+  .Doctor:hover .burgermenu {
+    display: block;
+  }
+  /* _______________________________________________________________________________________ */
+  .footer-container{
+    display: flex;
+    justify-content: space-between;
+    background-color:rgba(44, 105, 141,0.5);
+    margin-top: 18px
+}
+
+.footer-container > * {
+    margin: 10px 50px
+}
+
+.footer-container img{
+    width: 200px;
+    height : 100px;
+}
+/* _________________________________________________________ */
+.footer_left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 100px;
+    align-items: center;
+}
+
+header ,p {
+    color: wheat;
+}
+header ,h3{
+    color: wheat;
+}
