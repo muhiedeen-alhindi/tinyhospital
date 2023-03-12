@@ -25,7 +25,7 @@ $("#btn-admin").on('click',function(){
       console.log(res.data);
       let selectElement = $('<select id="dep_hospital"></select>');
       for (let i = 0; i < res.data.length; i++) {
-        let id = res.data[i].hospital_id;
+        let id = res.data[i].id;
         let hospitalName = res.data[i].name;
         
         let option = $("<option></option>").val(id).text(hospitalName);

@@ -14,7 +14,9 @@ $(window).on('load',function() {
       }
       let patient_id1 =localStorage.getItem('id');
       let patientid=$("<p></p>").text(patient_id1)
-      $(".container").append(selectElement ,patientid);  
+      $(".container").append(selectElement ,patientid); 
+      $(".container_paitents").append(selectElement ); 
+
     });
   });
   
