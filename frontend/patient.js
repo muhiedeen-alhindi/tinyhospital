@@ -37,3 +37,23 @@ $("#btn-admin").on('click',function(){
     });
   });
   
+  $(window).on('load',function() {
+    axios({
+      method: "get",
+      url: "http://localhost/tinyhospital/backend/room.php"
+    }).then(function (res) {
+      console.log(res.data);
+      let selectElement = $('<select id="dep_hospital"></select>');
+      for (let i = 0; i < res.data.length; i++) {
+        let id = res.data[i].id;
+        let room = res.data[i].number;
+        
+        let option = $("<option></option>").val(id).text(room);
+        selectElement.append(option);
+      }
+     
+      
+      $("#room").append(selectElement );  
+    });
+  });
+  
