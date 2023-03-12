@@ -17,7 +17,7 @@ function signin() {
         //    console.log(id1)
 
          
-    if(res.data.jwt==1){
+    if(res.data.type==1){
       window.location.href = "http://127.0.0.1:5500/frontend/htmls/admin.html";
     }
     else if(res.data.type==2){
