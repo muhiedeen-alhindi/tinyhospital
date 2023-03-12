@@ -9,8 +9,8 @@ function signin() {
     data.append('password', password);
     axios.post('http://localhost/tinyhospital/backend/login.php/', data).then(function (res) {
         console.log(res.data)
-        let id = res.data.id
-        window.localStorage.setItem('id', id);
+      
+        // window.localStorage.setItem('id', id);
     if (res.data.response== "logged in") {
         
         //    id1 =localStorage.getItem('id');
@@ -22,8 +22,15 @@ function signin() {
     }
     else if(res.data.type==2){
       window.location.href = "http://127.0.0.1:5500/frontend/htmls/employe.html";
+       let id = res.data.id
+      window.localStorage.setItem('id', id);
     } else if(res.data.type==3){
       window.location.href = "http://127.0.0.1:5500/frontend/htmls/patient.html";
+      
+      let id = res.data.id
+      window.localStorage.setItem('id', id);
+      console.log(id)
+
     }
 
     }else {
@@ -37,5 +44,5 @@ function signin() {
 
 }
 let login_btn= document.getElementById("btn_signin")
-console.log(login_btn)
+
 login_btn.addEventListener('click', signin);

@@ -2,7 +2,7 @@
  
 
 include('connection.php');
-header("Access-Control-Allow-Origin: *");
+header('Access-Control-Allow-Origin:*');
 
  
 
@@ -30,12 +30,12 @@ if ($num_rows == 0) {
     }
 }
 
+ 
+ 
 echo json_encode($response);
 
 
-
-
-
+ 
 
 
 
