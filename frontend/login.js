@@ -9,10 +9,15 @@ function signin() {
     data.append('password', password);
     axios.post('http://localhost/tinyhospital/backend/login.php/', data).then(function (res) {
         console.log(res.data)
-        
+        let id = res.data.id
+        window.localStorage.setItem('id', id);
     if (res.data.response== "logged in") {
-       
-    if(res.data.type==1){
+        
+        //    id1 =localStorage.getItem('id');
+        //    console.log(id1)
+
+         
+    if(res.data.jwt==1){
       window.location.href = "http://127.0.0.1:5500/frontend/htmls/admin.html";
     }
     else if(res.data.type==2){

@@ -1,6 +1,10 @@
 <?php
 include('connection.php');
 header('Access-Control-Allow-Origin:*');
+ 
+ 
+
+ 
 
 $email = $_POST['email'];
 $password = $_POST['password'];
@@ -25,6 +29,9 @@ if ($num_rows == 0) {
         $response['email'] = $email;
         $response['dob'] = $dob;
         $response['type'] = $type;
+
+
+         
         
     } else {
         $response["response"] = "Incorrect password";

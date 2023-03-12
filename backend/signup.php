@@ -1,10 +1,7 @@
 <?php
 include('connection.php');
-
 header('Access-Control-Allow-Origin:*');
 $email = $_POST['email'];
-$name = $_POST['name'];
-$dob = $_POST['dob'];
 $password = $_POST['password'];
 $type = $_POST['type'];
 
