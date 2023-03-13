@@ -122,11 +122,7 @@ gap:25px;
     margin: 10px 50px
 }
 
-.footer-container img{
-    width: 200px;
-    height : 100px;
-}
-/* _________________________________________________________ */
+ 
 .footer_left{
     display: flex;
     flex-direction: row;
@@ -135,4 +131,24 @@ gap:25px;
     align-items: center;
 }
 
- 
+ /* ___________________________________________________________________________ */
+
+ .patients{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+    text-align: center;
+    margin-top: 80px;
+ }
+ .patients select{
+    width: 200px;
+    height: 30px;
+ }
+
+ .patients button{
+    width: 100px;
+    height: 30;
+ }
