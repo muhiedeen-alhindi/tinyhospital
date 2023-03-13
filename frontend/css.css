@@ -152,3 +152,18 @@ gap:25px;
     width: 100px;
     height: 30;
  }
+/* _______________________________________________________ */
+.admin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+.admin select{
+    width: 200px;
+    height: 30px;
+ }
